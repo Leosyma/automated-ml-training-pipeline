@@ -17,12 +17,12 @@ pipeline/
 ├── modelos/                       # Modelos treinados
 ├── pipeline/
 │   ├── __init__.py                # Inicializador do módulo pipeline
-│   ├── dsa_extrai_dados.py        # Extração de dados
-│   ├── dsa_limpa_dados.py         # Limpeza de dados
-│   ├── dsa_processa_dados.py      # Pré-processamento
-│   ├── dsa_treina_modelo.py       # Treinamento do modelo
-│   ├── dsa_avalia_modelo.py       # Avaliação do modelo
-│   └── dsa_deploy.py              # Deploy do modelo
+│   ├── extrai_dados.py        # Extração de dados
+│   ├── limpa_dados.py         # Limpeza de dados
+│   ├── processa_dados.py      # Pré-processamento
+│   ├── treina_modelo.py       # Treinamento do modelo
+│   ├── avalia_modelo.py       # Avaliação do modelo
+│   └── deploy.py              # Deploy do modelo
 │
 └── projeto2.py                    # Script principal para execução do pipeline
 
@@ -30,15 +30,15 @@ pipeline/
 
 # Crie um ambiente virtual:
 
-python -m venv dsavenv
+python -m venv .venv
 
 # Ative o ambiente virtual:
 
 # Windows:
-dsavenv\Scripts\activate
+.venv\Scripts\activate
 
 # MacOS/Linux:
-source dsavenv/bin/activate
+source .venv/bin/activate
 
 # Execute as instruções abaixo conforme demonstrado nas aulas:
 

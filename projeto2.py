@@ -4,16 +4,16 @@
 # Imports
 import os
 import joblib
-from pipeline.dsa_extrai_dados import extrai_dados
-from pipeline.dsa_limpa_dados import limpa_dados
-from pipeline.dsa_processa_dados import preprocessa_dados
-from pipeline.dsa_treina_modelo import treina_modelo
-from pipeline.dsa_avalia_modelo import avalia_modelo
-from pipeline.dsa_deploy import carrega_modelo, faz_previsoes
+from pipeline.extrai_dados import extrai_dados
+from pipeline.limpa_dados import limpa_dados
+from pipeline.processa_dados import preprocessa_dados
+from pipeline.treina_modelo import treina_modelo
+from pipeline.avalia_modelo import avalia_modelo
+from pipeline.deploy import carrega_modelo, faz_previsoes
 from sklearn.model_selection import train_test_split
 
 # Função para executar o pipeline
-def dsa_executa_pipeline(data_path, target_column):
+def executa_pipeline(data_path, target_column):
     
     # Diretórios para salvar o modelo e os objetos de pré-processamento
     model_path = "modelos/random_forest_model.pkl"
@@ -116,7 +116,7 @@ if __name__ == "__main__":
     target_column = "target"      
 
     # Executa o pipeline 
-    dsa_executa_pipeline(data_path, target_column)
+    executa_pipeline(data_path, target_column)
 
     print("\nExecução do Pipeline Concluída com Sucesso!\n")
 
